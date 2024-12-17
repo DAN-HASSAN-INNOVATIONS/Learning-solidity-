@@ -23,13 +23,6 @@ contract InheritanceContract {
         _;
     }
 
-    function declareDeceased() external onlyOwner {
-        require(isOwnerDeceased, "Owner has not been declared deceased.");
-        require(address(this).balance > 0, "No funds available for withdrawal.");
-        recipient.transfer(address(this).balance);
-    }
-
-    // Fallback function to receive payments
-    receive() external payable {}
+    
 
 }
